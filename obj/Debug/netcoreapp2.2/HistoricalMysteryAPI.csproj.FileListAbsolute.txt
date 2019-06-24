@@ -1,0 +1,14 @@
+D:\CodeRepos\HistoricalMysteryAPI\bin\Debug\netcoreapp2.2\HistoricalMysteryAPI.deps.json
+D:\CodeRepos\HistoricalMysteryAPI\bin\Debug\netcoreapp2.2\HistoricalMysteryAPI.runtimeconfig.json
+D:\CodeRepos\HistoricalMysteryAPI\bin\Debug\netcoreapp2.2\HistoricalMysteryAPI.runtimeconfig.dev.json
+D:\CodeRepos\HistoricalMysteryAPI\bin\Debug\netcoreapp2.2\HistoricalMysteryAPI.dll
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.csproj.CoreCompileInputs.cache
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.RazorAssemblyInfo.cache
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.RazorAssemblyInfo.cs
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.AssemblyInfoInputs.cache
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.AssemblyInfo.cs
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.RazorTargetAssemblyInfo.cache
+D:\CodeRepos\HistoricalMysteryAPI\bin\Debug\netcoreapp2.2\HistoricalMysteryAPI.pdb
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.csprojAssemblyReference.cache
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.dll
+D:\CodeRepos\HistoricalMysteryAPI\obj\Debug\netcoreapp2.2\HistoricalMysteryAPI.pdb

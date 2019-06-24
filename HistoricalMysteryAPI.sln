@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoricalMysteryAPI", "HistoricalMysteryAPI.csproj", "{5B0E900C-9CF5-402B-93B4-3ABE7E48A24B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B0E900C-9CF5-402B-93B4-3ABE7E48A24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0E900C-9CF5-402B-93B4-3ABE7E48A24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0E900C-9CF5-402B-93B4-3ABE7E48A24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0E900C-9CF5-402B-93B4-3ABE7E48A24B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4B45ABF-96B9-4FB9-9916-A469F36854DE}
+	EndGlobalSection
+EndGlobal
