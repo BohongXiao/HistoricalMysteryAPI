@@ -1,5 +1,7 @@
-CREATE TABLE .dbo.Medium_User(
-	UserId uniqueidentifier,
+--CREATE SCHEMA HM
+
+CREATE TABLE .HM.Medium_User(
+	UserId int IDENTITY PRIMARY KEY,
 	UserName varchar(50),
 	EmailAddress nvarchar(100),
 	Password nvarchar(100),
@@ -13,17 +15,17 @@ CREATE TABLE .dbo.Medium_User(
 	UpdateDateTime datetime
 )
 
-CREATE TABLE .dbo.Medium_User_Keyboards(
-	KeyBoardSetupId uniqueidentifier,
-	UserId int,
+CREATE TABLE .HM.Medium_User_Keyboards(
+	KeyBoardSetupId int IDENTITY PRIMARY KEY,
+	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
 	KeyCombination nvarchar(100),
 	Functionality nvarchar(100)
 )
 
 
-CREATE TABLE .dbo.Medium_Article(
-	ArticleId Int,
-	ArticleVersion int,
+CREATE TABLE .HM.Medium_Article(
+	ArticleId int PRIMARY KEY,
+	--ArticleVersion int,
 	ArticleStatus varchar(25),
 	Tags varchar(25),
 	ArticleFeaturedImage nvarchar(Max),
@@ -32,66 +34,66 @@ CREATE TABLE .dbo.Medium_Article(
 	CustomizedArticleLink nvarchar(Max)
 )
 
-CREATE TABLE .dbo.Medium_Article_Content(
-	ArticleContentId uniqueidentifier,
-	ArticleId int, 
+CREATE TABLE .HM.Medium_Article_Content(
+	ArticleContentId int IDENTITY PRIMARY KEY,
+	ArticleId int FOREIGN KEY REFERENCES HM.Medium_Article(ArticleId), 
 	ParagraphNumber int,
 	ParagraphEmbedContent nvarchar(Max)
 )
 
-CREATE TABLE .dbo.Medium_Article_Image_Video_Library(
-	ArticalImageVideoId uniqueidentifier,
-	ArticalId int,
+CREATE TABLE .HM.Medium_Article_Image_Video_Library(
+	ArticalImageVideoId int IDENTITY PRIMARY KEY,
+	ArticalId int FOREIGN KEY REFERENCES HM.Medium_Article(ArticleId),
 	ArticalImageVideoType int,
 	ArticalImageVideoLink nvarchar(Max)
 )
 
-CREATE TABLE .dbo.FollowActivity(
-	FollowActivityId uniqueidentifier,
-	Direction int,
-	UserId int,
-	PassiveUserId int,
-	TimeStamp timestamp
+CREATE TABLE .HM.FollowActivity(
+	FollowActivityId int IDENTITY PRIMARY KEY,
+	Direction varchar(10) NOT NULL CHECK (Direction in('Follow', 'UnFollow')),
+	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	PassiveUserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	FollowTimeStamp timestamp
 )
 
-CREATE TABLE .dbo.ReadActivity(
-	ReadActivityId uniqueidentifier,
-	UserId int,
-	ArticleId int,
+CREATE TABLE .HM.ReadActivity(
+	ReadActivityId int IDENTITY PRIMARY KEY,
+	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	ArticleId int FOREIGN KEY REFERENCES HM.Medium_Article(ArticleId),
 	StartTime datetime,
 	EndTime datetime
 )
 
-CREATE TABLE .dbo.ClapActivity(
-	ClapActivityId uniqueidentifier,
-	Directioin int,
-	UserId int,
-	ArticleId int,
-	ResponseId int,
-	TimeStamp timestamp
+CREATE TABLE .HM.BookMarkActivity(
+	BookMarkActivityId int IDENTITY PRIMARY KEY,
+	Direction varchar(15) NOT NULL CHECK(Direction IN('BookMark', 'UnBookMark')),
+	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	ArticleId int FOREIGN KEY REFERENCES HM.Medium_Article(ArticleId),
+	BookMarkTimeStamp timestamp
 )
 
-CREATE TABLE .dbo.BookMarkActivity(
-	BookMarkActivityId uniqueidentifier,
-	DirectionId int,
-	UserId int,
-	ArticleId int,
-	TimeStamp timestamp
-)
-
-CREATE TABLE .dbo.ResponseActivity(
-	ResponseActivityId uniqueidentifier,
-	UserId int,
-	ArticleId int,
-	ParentResponseId int,
-	ResponseId int,
-	TimeStamp timestamp
-)
-
-CREATE TABLE .dbo.ResponseId(
-	ResponseContentId uniqueidentifier,
+CREATE TABLE .HM.ResponseContent(
+	ResponseContentId int IDENTITY PRIMARY KEY,
 	ResponseStatus varchar(25),
 	ResponseContent nvarchar(25),
 	CreateDateTime datetime,
 	UpdateDateTime datetime
+)
+
+CREATE TABLE .HM.ResponseActivity(
+	ResponseActivityId int IDENTITY PRIMARY KEY,
+	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	ArticleId int FOREIGN KEY REFERENCES HM.Medium_Article(ArticleId),
+	ParentResponseId int FOREIGN KEY REFERENCES HM.ResponseContent(ResponseContentId),
+	ResponseId int FOREIGN KEY REFERENCES HM.ResponseContent(ResponseContentId),
+	ResponseTimeStamp timestamp
+)
+
+CREATE TABLE .HM.ClapActivity(
+	ClapActivityId int IDENTITY PRIMARY KEY,
+	Direction varchar(10) NOT NULL CHECK(Direction IN('Clap', 'UnClap')),
+	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	ArticleId int FOREIGN KEY REFERENCES HM.Medium_Article(ArticleId),
+	ResponseId int FOREIGN KEY REFERENCES HM.ResponseContent(ResponseContentId),
+	ClapTimeStamp timestamp
 )
