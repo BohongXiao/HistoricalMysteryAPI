@@ -4445,6 +4445,86 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "BusinessServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Common": "1.0.0",
+          "DbDataAccess": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Models": "1.0.0",
+          "ServiceDataAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessServices.dll": {}
+        }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
+      "DbDataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DbDataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DbDataAccess.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
+      "ServiceDataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Interfaces": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ServiceDataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServiceDataAccess.dll": {}
+        }
       }
     }
   },
@@ -12134,14 +12214,50 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "BusinessServices/1.0.0": {
+      "type": "project",
+      "path": "../BusinessServices/BusinessServices.csproj",
+      "msbuildProject": "../BusinessServices/BusinessServices.csproj"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
+    "DbDataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DbDataAccess/DbDataAccess.csproj",
+      "msbuildProject": "../DbDataAccess/DbDataAccess.csproj"
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Interfaces/Interfaces.csproj",
+      "msbuildProject": "../Interfaces/Interfaces.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
+    "ServiceDataAccess/1.0.0": {
+      "type": "project",
+      "path": "../ServiceDataAccess/ServiceDataAccess.csproj",
+      "msbuildProject": "../ServiceDataAccess/ServiceDataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "BusinessServices >= 1.0.0",
+      "Common >= 1.0.0",
+      "DbDataAccess >= 1.0.0",
+      "Interfaces >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.7.9"
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.7.9",
+      "Models >= 1.0.0",
+      "ServiceDataAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12173,7 +12289,26 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\CodeRepos\\HistoricalMystery\\BusinessServices\\BusinessServices.csproj": {
+              "projectPath": "D:\\CodeRepos\\HistoricalMystery\\BusinessServices\\BusinessServices.csproj"
+            },
+            "D:\\CodeRepos\\HistoricalMystery\\Common\\Common.csproj": {
+              "projectPath": "D:\\CodeRepos\\HistoricalMystery\\Common\\Common.csproj"
+            },
+            "D:\\CodeRepos\\HistoricalMystery\\DbDataAccess\\DbDataAccess.csproj": {
+              "projectPath": "D:\\CodeRepos\\HistoricalMystery\\DbDataAccess\\DbDataAccess.csproj"
+            },
+            "D:\\CodeRepos\\HistoricalMystery\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "D:\\CodeRepos\\HistoricalMystery\\Interfaces\\Interfaces.csproj"
+            },
+            "D:\\CodeRepos\\HistoricalMystery\\Models\\Models.csproj": {
+              "projectPath": "D:\\CodeRepos\\HistoricalMystery\\Models\\Models.csproj"
+            },
+            "D:\\CodeRepos\\HistoricalMystery\\ServiceDataAccess\\ServiceDataAccess.csproj": {
+              "projectPath": "D:\\CodeRepos\\HistoricalMystery\\ServiceDataAccess\\ServiceDataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

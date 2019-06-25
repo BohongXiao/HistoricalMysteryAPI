@@ -1,0 +1,16 @@
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\ServiceDataAccess.deps.json
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\ServiceDataAccess.dll
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\ServiceDataAccess.pdb
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\Common.dll
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\Interfaces.dll
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\Models.dll
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\Common.pdb
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\Interfaces.pdb
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\bin\Debug\netcoreapp2.2\Models.pdb
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.csprojAssemblyReference.cache
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.csproj.CoreCompileInputs.cache
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.AssemblyInfoInputs.cache
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.AssemblyInfo.cs
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.csproj.CopyComplete
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.dll
+D:\CodeRepos\HistoricalMystery\ServiceDataAccess\obj\Debug\netcoreapp2.2\ServiceDataAccess.pdb
