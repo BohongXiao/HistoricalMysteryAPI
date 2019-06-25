@@ -1,0 +1,16 @@
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\DbDataAccess.deps.json
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\DbDataAccess.dll
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\DbDataAccess.pdb
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\Common.dll
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\Interfaces.dll
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\Models.dll
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\Common.pdb
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\Interfaces.pdb
+D:\CodeRepos\HistoricalMystery\DbDataAccess\bin\Debug\netcoreapp2.2\Models.pdb
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.csprojAssemblyReference.cache
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.csproj.CoreCompileInputs.cache
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.AssemblyInfoInputs.cache
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.AssemblyInfo.cs
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.csproj.CopyComplete
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.dll
+D:\CodeRepos\HistoricalMystery\DbDataAccess\obj\Debug\netcoreapp2.2\DbDataAccess.pdb

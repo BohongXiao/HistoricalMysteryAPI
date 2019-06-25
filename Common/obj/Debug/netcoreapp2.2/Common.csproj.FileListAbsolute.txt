@@ -1,0 +1,9 @@
+D:\CodeRepos\HistoricalMystery\Common\bin\Debug\netcoreapp2.2\Common.deps.json
+D:\CodeRepos\HistoricalMystery\Common\bin\Debug\netcoreapp2.2\Common.dll
+D:\CodeRepos\HistoricalMystery\Common\bin\Debug\netcoreapp2.2\Common.pdb
+D:\CodeRepos\HistoricalMystery\Common\obj\Debug\netcoreapp2.2\Common.csprojAssemblyReference.cache
+D:\CodeRepos\HistoricalMystery\Common\obj\Debug\netcoreapp2.2\Common.csproj.CoreCompileInputs.cache
+D:\CodeRepos\HistoricalMystery\Common\obj\Debug\netcoreapp2.2\Common.AssemblyInfoInputs.cache
+D:\CodeRepos\HistoricalMystery\Common\obj\Debug\netcoreapp2.2\Common.AssemblyInfo.cs
+D:\CodeRepos\HistoricalMystery\Common\obj\Debug\netcoreapp2.2\Common.dll
+D:\CodeRepos\HistoricalMystery\Common\obj\Debug\netcoreapp2.2\Common.pdb
