@@ -1,9 +1,0 @@
-D:\CodeRepos\HistoricalMystery\Models\bin\Debug\netcoreapp2.2\Models.deps.json
-D:\CodeRepos\HistoricalMystery\Models\bin\Debug\netcoreapp2.2\Models.dll
-D:\CodeRepos\HistoricalMystery\Models\bin\Debug\netcoreapp2.2\Models.pdb
-D:\CodeRepos\HistoricalMystery\Models\obj\Debug\netcoreapp2.2\Models.csprojAssemblyReference.cache
-D:\CodeRepos\HistoricalMystery\Models\obj\Debug\netcoreapp2.2\Models.csproj.CoreCompileInputs.cache
-D:\CodeRepos\HistoricalMystery\Models\obj\Debug\netcoreapp2.2\Models.AssemblyInfoInputs.cache
-D:\CodeRepos\HistoricalMystery\Models\obj\Debug\netcoreapp2.2\Models.AssemblyInfo.cs
-D:\CodeRepos\HistoricalMystery\Models\obj\Debug\netcoreapp2.2\Models.dll
-D:\CodeRepos\HistoricalMystery\Models\obj\Debug\netcoreapp2.2\Models.pdb
