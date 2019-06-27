@@ -5,10 +5,10 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "ClientApp/**/*.ts"
   ],
   "exclude": [
-    "src/test.ts",
-    "src/**/*.spec.ts"
+    "ClientApp/test.ts",
+    "ClientApp/**/*.spec.ts"
   ]
 }

@@ -1,8 +1,9 @@
 {
+  "exclude": ["./node_modules/"],
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./wwwroot/clientapp/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
