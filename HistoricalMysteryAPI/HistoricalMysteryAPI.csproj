@@ -11,6 +11,8 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
+    <PackageReference Include="NLog" Version="4.6.5" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +20,12 @@
     <ProjectReference Include="..\HM.Interfaces\HM.Interfaces.csproj" />
     <ProjectReference Include="..\HM.LogicContainers\HM.LogicContainers.csproj" />
     <ProjectReference Include="..\HM.Models\HM.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
