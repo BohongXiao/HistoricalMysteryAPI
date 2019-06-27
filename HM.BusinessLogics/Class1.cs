@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ServiceDataAccess
+namespace HM.BusinessLogics
 {
     public class Class1
     {

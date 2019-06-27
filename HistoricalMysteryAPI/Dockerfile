@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
-COPY ["HistoricalMysteryAPI.csproj", ""]
-RUN dotnet restore "HistoricalMysteryAPI.csproj"
+COPY ["HistoricalMysteryAPI/HistoricalMysteryAPI.csproj", "HistoricalMysteryAPI/"]
+RUN dotnet restore "HistoricalMysteryAPI/HistoricalMysteryAPI.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src/HistoricalMysteryAPI"
 RUN dotnet build "HistoricalMysteryAPI.csproj" -c Release -o /app
 
 FROM build AS publish
