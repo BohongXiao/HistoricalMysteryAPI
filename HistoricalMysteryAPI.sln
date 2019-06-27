@@ -5,19 +5,21 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistoricalMysteryAPI", "HistoricalMysteryAPI\HistoricalMysteryAPI.csproj", "{B3AED05F-6EFF-479C-B7ED-E295507F887A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.Models", "HM.Models\HM.Models.csproj", "{39FC40C9-5AF9-44AC-8258-959C632D541F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.Models", "HM.Models\HM.Models.csproj", "{39FC40C9-5AF9-44AC-8258-959C632D541F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.Interfaces", "HM.Interfaces\HM.Interfaces.csproj", "{C61B73F6-C024-401A-B639-A263F874FC54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.Interfaces", "HM.Interfaces\HM.Interfaces.csproj", "{C61B73F6-C024-401A-B639-A263F874FC54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.DataAccess.DB", "HM.DataAccess.DB\HM.DataAccess.DB.csproj", "{A7D33629-5F83-447E-85BB-2D50513C0E1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.DataAccess.DB", "HM.DataAccess.DB\HM.DataAccess.DB.csproj", "{A7D33629-5F83-447E-85BB-2D50513C0E1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.DataAccess.Service", "HM.DataAccess.Service\HM.DataAccess.Service.csproj", "{766B3515-914F-471E-9D95-565DB6F1620E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.DataAccess.Service", "HM.DataAccess.Service\HM.DataAccess.Service.csproj", "{766B3515-914F-471E-9D95-565DB6F1620E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.Common", "HM.Common\HM.Common.csproj", "{71624004-EC57-4B5C-A3B5-EC3A01A8EB4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.Common", "HM.Common\HM.Common.csproj", "{71624004-EC57-4B5C-A3B5-EC3A01A8EB4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.Tests", "HM.Tests\HM.Tests.csproj", "{CD24BFF7-813B-4D79-9AF7-E080371F9ECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.Tests", "HM.Tests\HM.Tests.csproj", "{CD24BFF7-813B-4D79-9AF7-E080371F9ECC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM.LogicContainers", "HM.LogicContainers\HM.LogicContainers.csproj", "{07FB2E1B-A522-46D4-A432-133D7B0E741C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HM.LogicContainers", "HM.LogicContainers\HM.LogicContainers.csproj", "{07FB2E1B-A522-46D4-A432-133D7B0E741C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoricalMysterySite", "HistoricalMysterySite\HistoricalMysterySite.csproj", "{47860E02-5EED-4A91-9149-222A4523B424}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{07FB2E1B-A522-46D4-A432-133D7B0E741C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07FB2E1B-A522-46D4-A432-133D7B0E741C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07FB2E1B-A522-46D4-A432-133D7B0E741C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47860E02-5EED-4A91-9149-222A4523B424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47860E02-5EED-4A91-9149-222A4523B424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47860E02-5EED-4A91-9149-222A4523B424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47860E02-5EED-4A91-9149-222A4523B424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
