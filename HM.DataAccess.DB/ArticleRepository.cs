@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
-using HM.Models;
+using HM.DataAccess.DB.Models;
 using Microsoft.Extensions.Configuration;
 
 namespace HM.DataAccess.DB
@@ -18,38 +18,28 @@ namespace HM.DataAccess.DB
             _config = config;
         }
 
-        public async Task<ArticleItem[]> GetAllArticles()
+        public async Task<IEnumerable<ArticleItemDto>> GetAllArticles()
         {
             string connectionString = _config.GetValue<string>("ConnectionStrings:HMConnection");
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-
                 string sQuery = "SELECT * FROM .HM.Medium_Article";
-                var result = await connection.QueryAsync<ArticleItem>(sQuery);
-                return result.ToArray();
+                var result = await connection.QueryAsync<ArticleItemDto>(sQuery);
+                return result;
             }
         }
 
-        public Task<ArticleItem> GetArticleById(int id)
+        public Task<ArticleItemDto> GetArticleById(int id)
         {
             throw new NotImplementedException();
-            //string connectionString = _config.GetValue<string>("ConnectionStrings:HMConnection");
-            //using (IDbConnection connection = new SqlConnection(connectionString))
-            //{
-            //    connection.Open();
-
-            //    string sQuery = "SELECT * FROM .HM.Medium_Article WHERE ArticleId = @id";
-            //    var result = await connection.QueryAsync<ArticleItem>(sQuery, new {id: id} );
-            //    return result.ToArray();
-            //}
         }
     }
 
     public interface IArticleRepository
     {
-        Task<ArticleItem[]> GetAllArticles();
+        Task<IEnumerable<ArticleItemDto>> GetAllArticles();
 
-        Task<ArticleItem> GetArticleById(int id);
+        Task<ArticleItemDto> GetArticleById(int id);
     }
 }
