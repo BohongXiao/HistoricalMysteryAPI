@@ -1,8 +1,26 @@
 --CREATE SCHEMA HM
 
+/*
+DROP TABLE .HM.Medium_User
+DROP TABLE .HM.Medium_User_Keyboards
+DROP TABLE .HM.Medium_Collection
+DROP TABLE .HM.Medium_Article
+DROP TABLE .HM.Medium_Article_Content
+DROP TABLE .HM.Medium_Article_Image_Video_Library
+DROP TABLE .HM.FollowActivity
+DROP TABLE .HM.ReadActivity
+DROP TABLE .HM.BookMarkActivity
+DROP TABLE .HM.ResponseContent
+DROP TABLE .HM.ResponseActivity
+DROP TABLE .HM.ClapActivity
+*/
+
 CREATE TABLE .HM.Medium_User(
 	UserId int IDENTITY PRIMARY KEY,
 	UserName varchar(50),
+	UserFirstName varchar(100),
+	UserMiddleName varchar(100),
+	UserLastName varchar(100),
 	EmailAddress nvarchar(100),
 	Password nvarchar(100),
 	MobileNumber varchar(25),
@@ -15,19 +33,23 @@ CREATE TABLE .HM.Medium_User(
 	UpdateDateTime datetime
 )
 
-CREATE TABLE .HM.Medium_User_Keyboards(
-	KeyBoardSetupId int IDENTITY PRIMARY KEY,
-	UserId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
-	KeyCombination nvarchar(100),
-	Functionality nvarchar(100)
+CREATE TABLE .HM.Medium_Collection(
+	CollectionId int PRIMARY KEY,
+	CollectionName varchar(25),
+	CollectionAvatar nvarchar(Max),
+	CollectionAbstract nvarchar(Max),
+	CollectionDescription nvarchar(Max),
+	CreationDateTime datetime,
+	UpdateDateTime datetime
 )
 
-
 CREATE TABLE .HM.Medium_Article(
-	ArticleId int PRIMARY KEY,
+	ArticleId int IDENTITY PRIMARY KEY,
 	--ArticleVersion int,
 	ArticleStatus varchar(25),
-	Tags varchar(25),
+	ArticleAuthorId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
+	ArticelCollectionId int,-- FOREIGN KEY REFERENCES HM.Medium_Collection(CollectionId),
+	ArticleTag varchar(25),
 	ArticleFeaturedImage nvarchar(Max),
 	ArticleDisplayTitle nvarchar(Max),
 	ArticleDisplaySubtitle nvarchar(Max),
