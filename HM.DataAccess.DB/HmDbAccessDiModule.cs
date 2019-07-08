@@ -8,6 +8,7 @@ namespace HM.DataAccess.DB
         public static void ConfigureRepositoryDi(this IServiceCollection services)
         {
             services.AddScoped<ITestRepo, TestRepo>();
+            services.AddTransient<IArticleRepository, ArticleRepository>();
         }
     }
 }
