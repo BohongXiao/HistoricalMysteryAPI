@@ -30,9 +30,16 @@ namespace HM.DataAccess.DB
             }
         }
 
-        public Task<ArticleItemDto> GetArticleById(int id)
+        public async Task<ArticleItemDto> GetArticleById(int id)
         {
-            throw new NotImplementedException();
+            string connectionString = _config.GetValue<string>("ConnectionStrings:HMConnection");
+            using (IDbConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sQuery = "SELECT * FROM .HM.Medium_Article WHERE ArticleId = @articleId";
+                var result = await connection.QuerySingleAsync<ArticleItemDto>(sQuery, new {articleId=id});
+                return result;
+            }
         }
     }
 

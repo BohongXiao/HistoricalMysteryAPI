@@ -33,10 +33,10 @@ namespace HistoricalMysteryAPI.Controllers
         }
 
         [HttpGet]
-        [Route("api/articles/{:id}")]
-        public async Task<ActionResult<IEnumerable<ArticleItem>>> GetArticleById([FromRoute] int id)
+        [Route("api/articles/{id}")]
+        public async Task<ActionResult<ArticleItem>> GetArticleById([FromRoute] int id)
         {
-            var result = await _articleRepository.GetArticleById(id);
+            ArticleItemDto result = await _articleRepository.GetArticleById(id);
             return Ok(result);
         }
     }
