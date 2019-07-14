@@ -41,6 +41,42 @@ namespace HM.DataAccess.DB
                 return result;
             }
         }
+
+        public async Task<IEnumerable<ArticleItemDto>> GetHeroArticle()
+        {
+            string connectionString = _config.GetValue<string>("ConnectionStrings:HMConnection");
+            using (IDbConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sQuery = "SELECT TOP 5 * FROM .HM.Medium_Article ORDER BY ArticleId DESC";
+                var result = await connection.QueryAsync<ArticleItemDto>(sQuery);
+                return result;
+            }
+        }
+
+        public async Task<IEnumerable<ArticleItemDto>> GetFeatureArticle()
+        {
+            string connectionString = _config.GetValue<string>("ConnectionStrings:HMConnection");
+            using (IDbConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sQuery = "SELECT * FROM .HM.Medium_Article ORDER BY ArticleId DESC OFFSET 5 ROWS FETCH NEXT 15 ROWS ONLY";
+                var result = await connection.QueryAsync<ArticleItemDto>(sQuery);
+                return result;
+            }
+        }
+
+        public async Task<IEnumerable<ArticleContentDto>> GetArticleContent(int articleId)
+        {
+            string connectionString = _config.GetValue<string>("ConnectionStrings:HMConnection");
+            using (IDbConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sQuery = "SELECT * FROM .HM.Medium_Article_Content WHERE ArticleId = @articleId";
+                IEnumerable<ArticleContentDto> result = await connection.QueryAsync<ArticleContentDto>(sQuery, new { articleId = articleId });
+                return result;
+            }
+        }
     }
 
     public interface IArticleRepository
@@ -48,5 +84,11 @@ namespace HM.DataAccess.DB
         Task<IEnumerable<ArticleItemDto>> GetAllArticles();
 
         Task<ArticleItemDto> GetArticleById(int id);
+
+        Task<IEnumerable<ArticleItemDto>> GetHeroArticle();
+
+        Task<IEnumerable<ArticleItemDto>> GetFeatureArticle();
+
+        Task<IEnumerable<ArticleContentDto>> GetArticleContent(int articleId);
     }
 }

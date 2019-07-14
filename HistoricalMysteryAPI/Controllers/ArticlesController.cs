@@ -33,11 +33,39 @@ namespace HistoricalMysteryAPI.Controllers
         }
 
         [HttpGet]
-        [Route("api/articles/{id}")]
-        public async Task<ActionResult<ArticleItem>> GetArticleById([FromRoute] int id)
+        [Route("api/articles/{articleId}")]
+        public async Task<ActionResult<ArticleItem>> GetArticleById([FromRoute] int articleId)
         {
-            ArticleItemDto result = await _articleRepository.GetArticleById(id);
-            return Ok(result);
+            ArticleItemDto articleItemDto = await _articleRepository.GetArticleById(articleId);
+            IEnumerable<ArticleItem> articleItem = _mapper.Map<IEnumerable<ArticleItem>>(articleItemDto);
+            return Ok(articleItem);
+        }
+
+        [HttpGet]
+        [Route("api/articles/heroArticles")]
+        public async Task<ActionResult<IEnumerable<ArticleItem>>> GetHeroArticles()
+        {
+            IEnumerable<ArticleItemDto> articleItemDtos = await _articleRepository.GetHeroArticle();
+            IEnumerable<ArticleItem> articleItems = _mapper.Map<IEnumerable<ArticleItem>>(articleItemDtos);
+            return Ok(articleItems);
+        }
+
+        [HttpGet]
+        [Route("api/articles/featureArticles")]
+        public async Task<ActionResult<IEnumerable<ArticleItem>>> GetFeatureArticles()
+        {
+            IEnumerable<ArticleItemDto> articleItemDtos = await _articleRepository.GetFeatureArticle();
+            IEnumerable<ArticleItem> articleItems = _mapper.Map<IEnumerable<ArticleItem>>(articleItemDtos);
+            return Ok(articleItems);
+        }
+
+        [HttpGet]
+        [Route("api/articles/articleContent/{articleId}")]
+        public async Task<ActionResult<IEnumerable<ArticleContent>>> GetArticleContent([FromRoute] int articleId)
+        {
+            IEnumerable<ArticleContentDto> articleItemDtos = await _articleRepository.GetArticleContent(articleId);
+            IEnumerable<ArticleContent> articleItems = _mapper.Map<IEnumerable<ArticleContent>>(articleItemDtos);
+            return Ok(articleItems);
         }
     }
 }

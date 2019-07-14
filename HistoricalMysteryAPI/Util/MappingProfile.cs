@@ -9,6 +9,7 @@ namespace HistoricalMysteryAPI.Util
         public MappingProfile()
         {
             CreateMap<ArticleItemDto, ArticleItem>().ReverseMap();
+            CreateMap<ArticleContentDto, ArticleContent>().ReverseMap();
         }
     }
 }
