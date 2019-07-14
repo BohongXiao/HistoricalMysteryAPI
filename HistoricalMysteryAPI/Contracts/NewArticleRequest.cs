@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace HistoricalMysteryAPI.Contracts
 {
-    public class ArticleItem
+    public class NewArticleRequest
     {
-        [JsonProperty]
-        public int ArticleId { get; set; }
-
         [JsonProperty]
         public int ArticleAuthorId { get; set; }
 
@@ -33,9 +33,6 @@ namespace HistoricalMysteryAPI.Contracts
         public int ArticleReadTime { get; set; }
 
         [JsonProperty]
-        public string UserFirstName { get; set; }
-
-        [JsonProperty]
-        public string UserLastName { get; set; }
+        public NewArticleContentRequest[] ArticleContent { get; set; }
     }
 }

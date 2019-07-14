@@ -10,6 +10,7 @@ namespace HistoricalMysteryAPI.Util
         {
             CreateMap<ArticleItemDto, ArticleItem>().ReverseMap();
             CreateMap<ArticleContentDto, ArticleContent>().ReverseMap();
+            CreateMap<ArticleContentRequest, NewArticleContentRequest>().ReverseMap();
         }
     }
 }

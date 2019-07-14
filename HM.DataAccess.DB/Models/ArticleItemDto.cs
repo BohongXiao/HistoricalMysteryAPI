@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HM.DataAccess.DB.Models
@@ -13,12 +14,19 @@ namespace HM.DataAccess.DB.Models
 
         public string ArticleTag { get; set; }
 
-        [Column("ArticleFeaturedImage")]
         public string ArticleFeatureImage { get; set; }
 
         public string ArticleDisplayTitle { get; set; }
 
         public string ArticleDisplaySubtitle { get; set; }
+
+        public DateTime ArticleUpdateTime { get; set; }
+
+        public int ArticleReadTime { get; set; }
+
+        public string UserFirstName { get; set; }
+
+        public string UserLastName { get; set; }
 
     }
 }

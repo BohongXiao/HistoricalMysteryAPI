@@ -48,12 +48,15 @@ CREATE TABLE .HM.Medium_Article(
 	--ArticleVersion int,
 	ArticleStatus varchar(25),
 	ArticleAuthorId int FOREIGN KEY REFERENCES HM.Medium_User(UserId),
-	ArticelCollectionId int,-- FOREIGN KEY REFERENCES HM.Medium_Collection(CollectionId),
+	ArticleCollectionId int,-- FOREIGN KEY REFERENCES HM.Medium_Collection(CollectionId),
 	ArticleTag varchar(25),
-	ArticleFeaturedImage nvarchar(Max),
+	ArticleFeatureImage nvarchar(Max),
 	ArticleDisplayTitle nvarchar(Max),
 	ArticleDisplaySubtitle nvarchar(Max),
-	CustomizedArticleLink nvarchar(Max)
+	CustomizedArticleLink nvarchar(Max),
+	ArticleReadTime int,
+	ArticleCreationTime datetime,
+	ArticleUpdateTime datetime
 )
 
 CREATE TABLE .HM.Medium_Article_Content(

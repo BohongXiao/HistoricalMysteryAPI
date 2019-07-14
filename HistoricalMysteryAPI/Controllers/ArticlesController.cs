@@ -69,5 +69,21 @@ namespace HistoricalMysteryAPI.Controllers
             IEnumerable<ArticleContent> articleItems = _mapper.Map<IEnumerable<ArticleContent>>(articleItemDtos);
             return Ok(articleItems);
         }
+
+        [HttpPost]
+        [Route("api/articles/newArticle")]
+        public async Task<ActionResult<int>> GetArticleContent([FromBody] NewArticleRequest articleRequest)
+        {
+
+            int articleId = await _articleRepository.SaveArticleRecord(
+                articleRequest.ArticleAuthorId,
+                articleRequest.ArticleFeatureImage,
+                articleRequest.ArticleDisplayTitle,
+                articleRequest.ArticleDisplaySubtitle,
+                _mapper.Map<NewArticleContentRequest[], ArticleContentRequest[]>(articleRequest.ArticleContent)
+                );
+
+            return Ok(articleId);
+        }
     }
 }
