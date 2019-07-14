@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace HM.DataAccess.DB.Models
 {
     public class ArticleItemDto
@@ -11,6 +13,7 @@ namespace HM.DataAccess.DB.Models
 
         public string ArticleTag { get; set; }
 
+        [Column("ArticleFeaturedImage")]
         public string ArticleFeatureImage { get; set; }
 
         public string ArticleDisplayTitle { get; set; }

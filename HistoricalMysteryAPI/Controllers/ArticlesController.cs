@@ -5,10 +5,12 @@ using HistoricalMysteryAPI.Contracts;
 using HM.DataAccess.DB;
 using HM.DataAccess.DB.Models;
 using HM.Interfaces.IUtils;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HistoricalMysteryAPI.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [ApiController]
     public class ArticlesController : ControllerBase
     {
@@ -37,7 +39,7 @@ namespace HistoricalMysteryAPI.Controllers
         public async Task<ActionResult<ArticleItem>> GetArticleById([FromRoute] int articleId)
         {
             ArticleItemDto articleItemDto = await _articleRepository.GetArticleById(articleId);
-            IEnumerable<ArticleItem> articleItem = _mapper.Map<IEnumerable<ArticleItem>>(articleItemDto);
+            ArticleItem articleItem = _mapper.Map<ArticleItem>(articleItemDto);
             return Ok(articleItem);
         }
 

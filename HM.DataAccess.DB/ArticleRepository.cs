@@ -24,7 +24,7 @@ namespace HM.DataAccess.DB
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sQuery = "SELECT * FROM .HM.Medium_Article";
+                string sQuery = $"SELECT ma.ArticleId, ma.ArticleStatus, ma.ArticleAuthorId, ma.ArticleTag, ma.ArticleDisplayTitle, ma.ArticleDisplaySubtitle, ma.ArticleFeaturedImage AS ArticleFeatureImage FROM .HM.Medium_Article ma";
                 var result = await connection.QueryAsync<ArticleItemDto>(sQuery);
                 return result;
             }
@@ -36,7 +36,7 @@ namespace HM.DataAccess.DB
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sQuery = "SELECT * FROM .HM.Medium_Article WHERE ArticleId = @articleId";
+                string sQuery = "SELECT ma.ArticleId, ma.ArticleStatus, ma.ArticleAuthorId, ma.ArticleTag, ma.ArticleDisplayTitle, ma.ArticleDisplaySubtitle, ma.ArticleFeaturedImage AS ArticleFeatureImage  FROM .HM.Medium_Article ma WHERE ArticleId = @articleId";
                 var result = await connection.QuerySingleAsync<ArticleItemDto>(sQuery, new {articleId=id});
                 return result;
             }
@@ -48,7 +48,7 @@ namespace HM.DataAccess.DB
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sQuery = "SELECT TOP 5 * FROM .HM.Medium_Article ORDER BY ArticleId DESC";
+                string sQuery = "SELECT TOP 5 ma.ArticleId, ma.ArticleStatus, ma.ArticleAuthorId, ma.ArticleTag, ma.ArticleDisplayTitle, ma.ArticleDisplaySubtitle, ma.ArticleFeaturedImage AS ArticleFeatureImage  FROM .HM.Medium_Article ma ORDER BY ArticleId DESC";
                 var result = await connection.QueryAsync<ArticleItemDto>(sQuery);
                 return result;
             }
@@ -60,7 +60,7 @@ namespace HM.DataAccess.DB
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sQuery = "SELECT * FROM .HM.Medium_Article ORDER BY ArticleId DESC OFFSET 5 ROWS FETCH NEXT 15 ROWS ONLY";
+                string sQuery = "SELECT ma.ArticleId, ma.ArticleStatus, ma.ArticleAuthorId, ma.ArticleTag, ma.ArticleDisplayTitle, ma.ArticleDisplaySubtitle, ma.ArticleFeaturedImage AS ArticleFeatureImage  FROM .HM.Medium_Article ma ORDER BY ArticleId DESC OFFSET 5 ROWS FETCH NEXT 15 ROWS ONLY";
                 var result = await connection.QueryAsync<ArticleItemDto>(sQuery);
                 return result;
             }
