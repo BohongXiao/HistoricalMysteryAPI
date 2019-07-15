@@ -90,12 +90,12 @@ SELECT * FROM .HM.Medium_User mu
 SELECT ma.ArticleId, 
 	ma.ArticleStatus, 
 	ma.ArticleAuthorId, 
-	ma.ArticleCollectionId,
 	ma.ArticleTag,
 	ma.ArticleDisplayTitle,
 	ma.ArticleDisplaySubtitle,
 	ma.ArticleFeaturedImage AS ArticleFeatureImage
 FROM .HM.Medium_Article ma
+
 
 SELECT * FROM .HM.Medium_Article_Content mac
 
@@ -105,3 +105,4 @@ SELECT * FROM
 WHERE Articles.ArticleRowNumber BETWEEN 6 AND 15
 
 SELECT * FROM .HM.Medium_Article ORDER BY ArticleId DESC OFFSET 5 ROWS FETCH NEXT 15 ROWS ONLY
+
