@@ -1,8 +1,7 @@
---CREATE SCHEMA HM
+CREATE SCHEMA HM
 
 /*
 DROP TABLE .HM.Medium_User
-DROP TABLE .HM.Medium_User_Keyboards
 DROP TABLE .HM.Medium_Collection
 DROP TABLE .HM.Medium_Article
 DROP TABLE .HM.Medium_Article_Content
